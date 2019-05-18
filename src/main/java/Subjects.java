@@ -7,6 +7,4 @@ public enum  Subjects {
     technology,
     sciences;
 
-
-
 }
