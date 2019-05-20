@@ -1,4 +1,6 @@
-public enum  Subjects {
+package Classes;
+
+public enum Lessons {
     english,
     afrikaans,
     mathimatics,
