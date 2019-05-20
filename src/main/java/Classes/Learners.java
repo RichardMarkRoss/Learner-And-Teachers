@@ -4,41 +4,54 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Learners extends Person {
-    Map<String, Integer> hash = new HashMap<String, Integer>();
-    private String username = "";
-    private String surname = "";
-    private String email = "";
+    private Map<String, Integer> lessonStored = new HashMap<String, Integer>();
+    private Map<String, Integer> learnerStored = new HashMap<String, Integer>();
+    Person person;
 
 
-    public void setLearner() {
-        this.username = getName();
+    public String storeLessons() {
         try {
-            if (!hash.containsKey(username)) {
-                this.hash.put(username, 0);
+            if (!lessonStored.containsKey(getLessons().toString())) {
+                this.lessonStored.put(getLessons().toString() , 0);
+                return "Lesson Added";
             }
-
-            if (hash.containsKey(username)) {
-                int counterLearner = this.hash.get(username);
-                counterLearner++;
-                this.hash.put(username, counterLearner);
+            if (lessonStored.containsKey(getLessons().toString())) {
+                return "Duplicate lesson";
             }
         } catch (Exception ex) {
             System.out.println("fail!");
         }
+        return null;
     }
 
-    public void qualifiedLearner() {
-        this.username = getName();
-        int amountLearner = hash.get(username);
+    public String setPerson() {
         try {
-            if (amountLearner > 3) {
-                System.out.println("not valued!");
+            if (!learnerStored.containsKey(getName())) {
+                this.learnerStored.put(getName(), 0);
+                return "new learner added: " + getName();
             }
-            if (amountLearner <= 3) {
-                System.out.println("valued");
+            if (learnerStored.containsKey(getName())) {
+                int counterForUser = this.learnerStored.get(getName());
+                counterForUser++;
+                this.learnerStored.put(getName(), counterForUser);
+                return getName() + " added";
             }
         } catch (Exception ex) {
-            System.out.println("fail!");
+            return "fail!";
+        }
+        return "";
+    }
+
+    public String qualifiedPerson() {
+        String username = getName();
+        int mapSize = lessonStored.size();
+        try {
+            if (mapSize > 3) {
+                return username + " not valued!";
+            }
+            return username + " valued!";
+        } catch (Exception ex) {
+            return "fail!";
         }
     }
 }

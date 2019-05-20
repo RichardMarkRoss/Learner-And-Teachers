@@ -1,4 +1,5 @@
 import Classes.Learners;
+import Classes.Lessons;
 import Classes.Person;
 import org.junit.Test;
 
@@ -14,12 +15,16 @@ public class PersonTest {
         String email = "richard@accenture.co.za";
         String surname = "Ross";
 
+
         learners.setName(name);
         learners.setEmail(email);
         learners.setSurname(surname);
+        learners.setLessons(Lessons.valueOf("English"));
+
 
         assertEquals( "richard@accenture.co.za", learners.getEmail());
         assertEquals( "Richard",learners.getName());
         assertEquals( "Ross", learners.getSurname());
+        assertEquals( Lessons.English, learners.getLessons());
     }
 }

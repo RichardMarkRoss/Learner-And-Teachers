@@ -1,12 +1,16 @@
 package Classes;
 
+import java.util.Map;
+import java.util.Set;
+
 public enum Lessons {
-    english,
-    afrikaans,
-    mathimatics,
-    history,
-    biology,
-    technology,
-    sciences;
+
+    English,
+    Afrikaans,
+    Mathematics,
+    History,
+    Biology,
+    Technology,
+    Sciences;
 
 }
