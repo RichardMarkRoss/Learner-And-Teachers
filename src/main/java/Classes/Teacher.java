@@ -3,17 +3,16 @@ package Classes;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Teacher extends Person {
-    private Map<String, Integer> lessonStored = new HashMap<String, Integer>();
-    private Map<String, Integer> teacherStored = new HashMap<String, Integer>();
-    Person person;
+class Teacher extends Person {
+    private Map<String, Integer> lessonStored = new HashMap<>();
+    private Map<String, Integer> teacherStored = new HashMap<>();
 
-    public Teacher(String name, String surname, String email, Lessons lessons) {
+       Teacher(String name, String surname, String email, Lessons lessons) {
         super(name, surname, email, lessons);
     }
 
 
-    public String storeLessons() {
+    String storeLessons() {
         try {
             if (!lessonStored.containsKey(getLessons().toString())) {
                 this.lessonStored.put(getLessons().toString() , 0);
@@ -29,10 +28,10 @@ public class Teacher extends Person {
     }
 
 
-    public String setPerson() {
+    String setPerson() {
         String name = getName();
         try {
-            if (!teacherStored.containsKey(person.getName())) {
+            if (!teacherStored.containsKey(getName())) {
                 this.teacherStored.put(name, 0);
                 return "new learner added: " + getName();
             }
@@ -49,7 +48,7 @@ public class Teacher extends Person {
     }
 
 
-    public String qualifiedPerson() {
+    String qualifiedPerson() {
         String username = getName();
         int mapSize = lessonStored.size();
         try {

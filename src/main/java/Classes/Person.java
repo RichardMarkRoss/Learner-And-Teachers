@@ -1,6 +1,6 @@
 package Classes;
 
-public class Person {
+class Person {
     private static String name;
     private static String surname;
     private static String email;
