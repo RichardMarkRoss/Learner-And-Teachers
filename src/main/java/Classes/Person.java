@@ -6,6 +6,13 @@ public class Person {
     private String email;
     private Lessons lessons;
 
+    public Person(String name, String surname, String email, Lessons lessons){
+        this.name = name;
+        this.surname = surname;
+        this.email = email;
+        this.lessons = lessons;
+    }
+
     public void setEmail(String email) {
         this.email = email;
     }

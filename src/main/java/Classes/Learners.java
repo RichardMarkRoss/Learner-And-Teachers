@@ -6,7 +6,10 @@ import java.util.Map;
 public class Learners extends Person {
     private Map<String, Integer> lessonStored = new HashMap<String, Integer>();
     private Map<String, Integer> learnerStored = new HashMap<String, Integer>();
-    Person person;
+
+    public Learners(String name, String surname, String email, Lessons lessons) {
+        super(name, surname, email, lessons);
+    }
 
 
     public String storeLessons() {
@@ -21,9 +24,8 @@ public class Learners extends Person {
         } catch (Exception ex) {
             System.out.println("fail!");
         }
-        return null;
+        return "";
     }
-
     public String setPerson() {
         try {
             if (!learnerStored.containsKey(getName())) {
@@ -41,7 +43,6 @@ public class Learners extends Person {
         }
         return "";
     }
-
     public String qualifiedPerson() {
         String username = getName();
         int mapSize = lessonStored.size();

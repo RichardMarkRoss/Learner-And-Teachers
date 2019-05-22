@@ -8,6 +8,10 @@ public class Teacher extends Person {
     private Map<String, Integer> teacherStored = new HashMap<String, Integer>();
     Person person;
 
+    public Teacher(String name, String surname, String email, Lessons lessons) {
+        super(name, surname, email, lessons);
+    }
+
 
     public String storeLessons() {
         try {
