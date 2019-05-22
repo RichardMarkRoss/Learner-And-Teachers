@@ -1,8 +1,5 @@
 package Classes;
 
-import Classes.Learners;
-import Classes.Lessons;
-import Classes.Teacher;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -29,7 +26,7 @@ public class TeachersTest {
         teacher.setLessons(Lessons.valueOf("Afrikaans"));
         teacher.setLessons(Lessons.valueOf("History"));
 
-        assertEquals("fail!", teacher.setPerson());
+        assertEquals("new learner added: Andre", teacher.setPerson());
         assertEquals("Andre not valued!", teacher.qualifiedPerson());
 
     }
@@ -46,7 +43,7 @@ public class TeachersTest {
 
 
 
-        assertEquals("fail!", teacher.setPerson());
+        assertEquals("new learner added: Unalo", teacher.setPerson());
         assertEquals("Lesson Added", teacher.storeLessons());
     }
 }

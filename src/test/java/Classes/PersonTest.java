@@ -1,7 +1,5 @@
 package Classes;
 
-import Classes.Learners;
-import Classes.Lessons;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

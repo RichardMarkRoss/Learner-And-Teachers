@@ -1,46 +1,50 @@
 package Classes;
 
 public class Person {
-    private String name;
-    private String surname;
-    private String email;
-    private Lessons lessons;
+    private static String name;
+    private static String surname;
+    private static String email;
+    private static Lessons lessons;
 
-    public Person(String name, String surname, String email, Lessons lessons){
-        this.name = name;
-        this.surname = surname;
-        this.email = email;
-        this.lessons = lessons;
+    Person(String name, String surname, String email, Lessons lessons){
+        Person.name = name;
+        Person.surname = surname;
+        Person.email = email;
+        Person.lessons = lessons;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    void setLessons(Lessons lessons) {
+        Person.lessons = lessons;
     }
 
-    public void setName(String name) {
-            this.name = name;
-    }
-
-    public void setSurname(String surname) {
-        this.surname = surname;
-    }
-
-    public void setLessons(Lessons lessons) {
-        this.lessons = lessons;
-    }
-
-    public Lessons getLessons() {
+    static Lessons getLessons() {
         return lessons;
     }
 
-    public String getName() {
+    static String getName() {
         return name;
     }
 
-    public String getSurname() {
+    static String getSurname() {
         return surname;
     }
-    public String getEmail() {
+
+    static String getEmail() {
         return email;
     }
 }
+
+
+
+
+//    public void setEmail(String email) {
+//        this.email = email;
+//    }
+//
+//    public void setName(String name) {
+//        this.name = name;
+//    }
+//
+//    public void setSurname(String surname) {
+//        this.surname = surname;
+//    }
