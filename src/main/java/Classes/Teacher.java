@@ -7,18 +7,18 @@ class Teacher extends Person {
     private Map<String, Integer> lessonStored = new HashMap<>();
     private Map<String, Integer> teacherStored = new HashMap<>();
 
-       Teacher(String name, String surname, String email, Lessons lessons) {
-        super(name, surname, email, lessons);
+       Teacher(String name, String surname, String email, Subjects subjects) {
+        super(name, surname, email, subjects);
     }
 
 
     String storeLessons() {
         try {
-            if (!lessonStored.containsKey(getLessons().toString())) {
-                this.lessonStored.put(getLessons().toString() , 0);
+            if (!lessonStored.containsKey(getSubjects().toString())) {
+                this.lessonStored.put(getSubjects().toString() , 0);
                 return "Lesson Added";
             }
-            if (lessonStored.containsKey(getLessons().toString())) {
+            if (lessonStored.containsKey(getSubjects().toString())) {
                 return "Duplicate lesson";
             }
         } catch (Exception ex) {
@@ -35,7 +35,7 @@ class Teacher extends Person {
                 this.teacherStored.put(name, 0);
                 return "new learner added: " + getName();
             }
-            if (teacherStored.containsKey(getLessons().toString())) {
+            if (teacherStored.containsKey(getSubjects().toString())) {
                 int counterForUser = this.teacherStored.get(name);
                 counterForUser++;
                 this.teacherStored.put(name, counterForUser);

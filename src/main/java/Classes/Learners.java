@@ -7,18 +7,18 @@ class Learners extends Person {
     private Map<String, Integer> lessonStored = new HashMap<>();
     private Map<String, Integer> learnerStored = new HashMap<>();
 
-    Learners(String name, String surname, String email, Lessons lessons) {
-        super(name, surname, email, lessons);
+    Learners(String name, String surname, String email, Subjects subjects) {
+        super(name, surname, email, subjects);
     }
 
 
     String storeLessons() {
         try {
-            if (!lessonStored.containsKey(getLessons().toString())) {
-                this.lessonStored.put(getLessons().toString() , 0);
+            if (!lessonStored.containsKey(getSubjects().toString())) {
+                this.lessonStored.put(getSubjects().toString() , 0);
                 return "Lesson Added";
             }
-            if (lessonStored.containsKey(getLessons().toString())) {
+            if (lessonStored.containsKey(getSubjects().toString())) {
                 return "Duplicate lesson";
             }
         } catch (Exception ex) {

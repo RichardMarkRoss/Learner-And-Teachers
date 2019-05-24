@@ -1,0 +1,10 @@
+insert into teacher (first_name, last_name, email) values ('Lindani', 'Pani', 'lindani@email.com');
+insert into teacher (first_name, last_name, email) values ('Siba', 'Khumalo', 'siba@khumalo.com');
+insert into teacher (first_name, last_name, email) values ('Nathri', 'Jacobs', 'Nathri@email.com');
+insert into teacher (first_name, last_name, email) values ('Richard', 'Ross', 'Richard@khumalo.com');
+insert into teacher (first_name, last_name, email) values ('Anele', 'Bonaventura', 'Anele@email.com');
+insert into teacher (first_name, last_name, email) values ('Andre', 'Mentor', 'Andre@khumalo.com');
+insert into teacher (first_name, last_name, email) values ('Unalo', 'Mthokothu', 'Unalo@email.com');
+insert into teacher (first_name, last_name, email) values ('Lilhe', 'Rugby', 'Lilhe@khumalo.com');
+insert into teacher (first_name, last_name, email) values ('Ziyanda', 'Lady', 'Ziyanda@email.com');
+insert into teacher (first_name, last_name, email) values ('Tabang', 'Mentor', 'Tabang@khumalo.com');
