@@ -4,6 +4,7 @@ package Classes;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class LearnersTest {
 
@@ -15,14 +16,14 @@ public class LearnersTest {
         learners.setLessons(Subjects.valueOf("Biology"));
 
 
-        assertEquals("Yegan valued!", learners.qualifiedPerson());
+        assertTrue(learners.qualifiedPerson());
     }
     @Test
     public void ShouldTestIfLearnerIsNotQualified(){
         Learners learners = new Learners("Nathri","Hacker","Nat@hack.co.za", Subjects.valueOf("Mathematics"));
 
 
-        assertEquals("Nathri valued!", learners.qualifiedPerson());
+        assertTrue(learners.qualifiedPerson());
     }
     @Test
     public void ShouldTestIfLearnerHasBeenStored(){
@@ -33,7 +34,7 @@ public class LearnersTest {
 
         assertEquals("new learner added: Funky", learners.setPerson());
         assertEquals("Funky added", learners.setPerson());
-        assertEquals("Funky valued!", learners.qualifiedPerson());
+        assertTrue(learners.qualifiedPerson());
 
     }
 

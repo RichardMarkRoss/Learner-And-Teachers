@@ -4,13 +4,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 class Teacher extends Person {
-    private Map<String, Integer> lessonStored = new HashMap<>();
-    private Map<String, Integer> teacherStored = new HashMap<>();
+     Map<String, Integer> lessonStored = new HashMap<>();
+     static Map<String, Integer> teacherStored = new HashMap<>();
 
        Teacher(String name, String surname, String email, Subjects subjects) {
-        super(name, surname, email, subjects);
+           super(name, surname, email, subjects);
     }
-
 
     String storeLessons() {
         try {
@@ -24,7 +23,7 @@ class Teacher extends Person {
         } catch (Exception ex) {
             System.out.println("fail!");
         }
-        return null;
+        return "lesson not added";
     }
 
 
@@ -32,13 +31,13 @@ class Teacher extends Person {
         String name = getName();
         try {
             if (!teacherStored.containsKey(getName())) {
-                this.teacherStored.put(name, 0);
+                teacherStored.put(name, 0);
                 return "new learner added: " + getName();
             }
             if (teacherStored.containsKey(getSubjects().toString())) {
-                int counterForUser = this.teacherStored.get(name);
+                int counterForUser = teacherStored.get(name);
                 counterForUser++;
-                this.teacherStored.put(name, counterForUser);
+                teacherStored.put(name, counterForUser);
                 return getName() + " added";
             }
         } catch (Exception ex) {
@@ -48,16 +47,23 @@ class Teacher extends Person {
     }
 
 
-    String qualifiedPerson() {
-        String username = getName();
+     Boolean qualifiedPerson() {
         int mapSize = lessonStored.size();
         try {
             if (mapSize <= 2) {
-                return username + " not valued!";
+                return true;
             }
-            return username + " valued!";
+            return false;
         } catch (Exception ex) {
-            return "fail!";
+            return false;
         }
     }
+
+    public String getTeacherName(){
+        return getName();
+    }
+    public Subjects getTeacherLesson(){
+           return getSubjects();
+    }
 }
+

@@ -4,8 +4,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 class Learners extends Person {
-    private Map<String, Integer> lessonStored = new HashMap<>();
-    private Map<String, Integer> learnerStored = new HashMap<>();
+        static Map<String, Integer> lessonStored = new HashMap<>();
+        static Map<String, Integer> learnerStored = new HashMap<>();
 
     Learners(String name, String surname, String email, Subjects subjects) {
         super(name, surname, email, subjects);
@@ -15,7 +15,7 @@ class Learners extends Person {
     String storeLessons() {
         try {
             if (!lessonStored.containsKey(getSubjects().toString())) {
-                this.lessonStored.put(getSubjects().toString() , 0);
+                lessonStored.put(getSubjects().toString() , 0);
                 return "Lesson Added";
             }
             if (lessonStored.containsKey(getSubjects().toString())) {
@@ -43,16 +43,22 @@ class Learners extends Person {
         }
         return "";
     }
-    String qualifiedPerson() {
+    boolean qualifiedPerson() {
         String username = getName();
         int mapSize = lessonStored.size();
         try {
             if (mapSize > 3) {
-                return username + " not valued!";
+                return false;
             }
-            return username + " valued!";
+            return true;
         } catch (Exception ex) {
-            return "fail!";
+            return false;
         }
+    }
+    public String getLearnerName(){
+        return getName();
+    }
+    public Subjects getLearnerLesson(){
+        return getSubjects();
     }
 }
