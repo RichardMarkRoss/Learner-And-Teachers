@@ -34,7 +34,7 @@ public class TeachersTest {
         teacher.setLessons(Subjects.valueOf("Afrikaans"));
         teacher.setLessons(Subjects.valueOf("History"));
 
-        assertEquals("new learner added: Andre", teacher.setPerson());
+        assertEquals("new teacher added", teacher.setPerson());
         assertEquals(true, teacher.qualifiedPerson());
 
     }
@@ -49,7 +49,7 @@ public class TeachersTest {
 
 
 
-        assertEquals("new learner added: Unalo", teacher.setPerson());
+        assertEquals("new teacher added", teacher.setPerson());
         assertEquals("Lesson Added", teacher.storeLessons());
     }
 }

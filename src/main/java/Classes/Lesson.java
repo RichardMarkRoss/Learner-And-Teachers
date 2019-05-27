@@ -16,7 +16,7 @@ public class Lesson {
     String teacherForLesson() {
         try {
             if (teacher.qualifiedPerson().equals(true)) {
-                return teacher.getTeacherName();
+                return String.valueOf(teacher.getTeacherName());
             }
             return "Teacher not qualified for lesson";
         } catch (Exception ex) {
@@ -46,7 +46,6 @@ public class Lesson {
                 for (HashMap.Entry<String, Integer> entry : teacherStored.entrySet()) {
                     value = entry.getValue();
                 }
-                return value;
             }
         } catch (Exception ex) {
             return 0;

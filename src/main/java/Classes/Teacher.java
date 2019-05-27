@@ -4,17 +4,17 @@ import java.util.HashMap;
 import java.util.Map;
 
 class Teacher extends Person {
-     Map<String, Integer> lessonStored = new HashMap<>();
-     static Map<String, Integer> teacherStored = new HashMap<>();
+    Map<String, Integer> lessonStored = new HashMap<>();
+    static Map<String, Integer> teacherStored = new HashMap<>();
 
-       Teacher(String name, String surname, String email, Subjects subjects) {
-           super(name, surname, email, subjects);
+    Teacher(String name, String surname, String email, Subjects subjects) {
+        super(name, surname, email, subjects);
     }
 
     String storeLessons() {
         try {
             if (!lessonStored.containsKey(getSubjects().toString())) {
-                this.lessonStored.put(getSubjects().toString() , 0);
+                this.lessonStored.put(getSubjects().toString(), 0);
                 return "Lesson Added";
             }
             if (lessonStored.containsKey(getSubjects().toString())) {
@@ -32,22 +32,16 @@ class Teacher extends Person {
         try {
             if (!teacherStored.containsKey(getName())) {
                 teacherStored.put(name, 0);
-                return "new learner added: " + getName();
+                return "new teacher added";
             }
-            if (teacherStored.containsKey(getSubjects().toString())) {
-                int counterForUser = teacherStored.get(name);
-                counterForUser++;
-                teacherStored.put(name, counterForUser);
-                return getName() + " added";
-            }
+            return "Update teacher";
         } catch (Exception ex) {
             return "fail!";
         }
-        return "";
     }
 
 
-     Boolean qualifiedPerson() {
+    Boolean qualifiedPerson() {
         int mapSize = lessonStored.size();
         try {
             if (mapSize <= 2) {
@@ -59,11 +53,23 @@ class Teacher extends Person {
         }
     }
 
-    public String getTeacherName(){
+
+//    String getTeacherName() {
+//        String key = "failed!";
+//        for (HashMap.Entry<String, Integer> entry : teacherStored.entrySet()){
+//              key = entry.getKey();
+//            return key;
+//        }
+//        return key;
+//    }
+
+    String getTeacherName() {
         return getName();
     }
-    public Subjects getTeacherLesson(){
-           return getSubjects();
+
+
+    public Subjects getTeacherLesson() {
+        return getSubjects();
     }
 }
 
