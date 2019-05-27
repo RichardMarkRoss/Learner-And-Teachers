@@ -29,13 +29,13 @@ class Learners extends Person {
     String setPerson() {
         try {
             if (!learnerStored.containsKey(getName())) {
-                this.learnerStored.put(getName(), 0);
+                learnerStored.put(getName(), 0);
                 return "new learner added: " + getName();
             }
             if (learnerStored.containsKey(getName())) {
-                int counterForUser = this.learnerStored.get(getName());
+                int counterForUser = learnerStored.get(getName());
                 counterForUser++;
-                this.learnerStored.put(getName(), counterForUser);
+                learnerStored.put(getName(), counterForUser);
                 return getName() + " added";
             }
         } catch (Exception ex) {

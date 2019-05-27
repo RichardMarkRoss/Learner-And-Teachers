@@ -1,6 +1,12 @@
 package Classes;
 
+import java.util.HashMap;
+
 import static Classes.Learners.learnerStored;
+import static Classes.Learners.lessonStored;
+import static Classes.Person.getName;
+import static Classes.Person.getSubjects;
+import static Classes.Teacher.teacherStored;
 
 public class Lesson {
 
@@ -13,15 +19,12 @@ public class Lesson {
                 return teacher.getTeacherName();
             }
             return "Teacher not qualified for lesson";
-            //teacher not qualified for lesson
-            //convert to string so you can test the method
         } catch (Exception ex) {
-            System.out.println(ex.fillInStackTrace());
             return "fail!";
         }
     }
 
-     String learnerForLesson() {
+    String learnerForLesson() {
         try {
             if (learnerStored.size() >= 3 && teacherForLesson().equals(teacher.getTeacherName())) {
                 //add tokens to the teacher;
@@ -33,5 +36,21 @@ public class Lesson {
         }
     }
 
-
+    public int teacherTokens() {
+        int value = 0;
+        try {
+            if (teacherStored.containsKey(teacher.getTeacherName())) {
+                int counterForUser = learnerStored.get(teacher.getTeacherName());
+                counterForUser = counterForUser + 5;
+                teacherStored.put(teacher.getTeacherName(), counterForUser);
+                for (HashMap.Entry<String, Integer> entry : teacherStored.entrySet()) {
+                    value = entry.getValue();
+                }
+                return value;
+            }
+        } catch (Exception ex) {
+            return 0;
+        }
+        return value;
+    }
 }
