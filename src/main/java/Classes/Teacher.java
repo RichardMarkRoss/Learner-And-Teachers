@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 class Teacher extends Person {
-    Map<String, Integer> lessonStored = new HashMap<>();
+    private Map<String, Integer> lessonStored = new HashMap<>();
     static Map<String, Integer> teacherStored = new HashMap<>();
 
     Teacher(String name, String surname, String email, Subjects subjects) {
@@ -44,32 +44,19 @@ class Teacher extends Person {
     Boolean qualifiedPerson() {
         int mapSize = lessonStored.size();
         try {
-            if (mapSize <= 2) {
-                return true;
-            }
-            return false;
+            return mapSize <= 2;
         } catch (Exception ex) {
             return false;
         }
     }
 
 
-//    String getTeacherName() {
-//        String key = "failed!";
-//        for (HashMap.Entry<String, Integer> entry : teacherStored.entrySet()){
-//              key = entry.getKey();
-//            return key;
-//        }
-//        return key;
-//    }
-
     String getTeacherName() {
-        return getName();
-    }
-
-
-    public Subjects getTeacherLesson() {
-        return getSubjects();
+        String key = "failed!";
+        for (HashMap.Entry<String, Integer> entry : teacherStored.entrySet()) {
+            key = entry.getKey();
+            return key;
+        }
+        return key;
     }
 }
-

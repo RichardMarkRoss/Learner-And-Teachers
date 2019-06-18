@@ -3,9 +3,6 @@ package Classes;
 import java.util.HashMap;
 
 import static Classes.Learners.learnerStored;
-import static Classes.Learners.lessonStored;
-import static Classes.Person.getName;
-import static Classes.Person.getSubjects;
 import static Classes.Teacher.teacherStored;
 
 public class Lesson {
