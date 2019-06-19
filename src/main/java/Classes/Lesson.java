@@ -1,11 +1,17 @@
 package Classes;
 
 import java.util.HashMap;
+import java.util.Map;
 
 import static Classes.Learners.learnerStored;
 import static Classes.Teacher.teacherStored;
 
 public class Lesson {
+
+    public Map<String, Integer> teacherTokens = new HashMap<>();
+    public Map<String, Integer> studentTokens = new HashMap<>();
+    public Map<String, Integer> lessonHeld = new HashMap<>();
+
 
     Teacher teacher;
     Learners learners;
@@ -24,7 +30,6 @@ public class Lesson {
     String learnerForLesson() {
         try {
             if (learnerStored.size() >= 3 && teacherForLesson().equals(teacher.getTeacherName())) {
-                //add tokens to the teacher;
                 return "lesson can be learnt";
             }
             return "lesson can not be taught";
@@ -33,20 +38,39 @@ public class Lesson {
         }
     }
 
-    public int teacherTokens() {
+    int teacherTokens() {
         int value = 0;
         try {
             if (teacherStored.containsKey(teacher.getTeacherName())) {
-                int counterForUser = learnerStored.get(teacher.getTeacherName());
-                counterForUser = counterForUser + 5;
-                teacherStored.put(teacher.getTeacherName(), counterForUser);
-                for (HashMap.Entry<String, Integer> entry : teacherStored.entrySet()) {
+                this.teacherTokens.put(teacher.getTeacherName(), 5);
+            } else
+                for (HashMap.Entry<String, Integer> entry : teacherTokens.entrySet()) {
                     value = entry.getValue();
                 }
-            }
+        } catch (Exception ex) {
+            return 0;
+        }
+        return value;
+    }
+
+    int learnerTokens() {
+        int value = 0;
+        try {
+            if (learnerStored.containsKey(learners.getLearnerName())) {
+                this.studentTokens.put(learners.getLearnerName(), 5);
+            } else
+                for (HashMap.Entry<String, Integer> entry : studentTokens.entrySet()) {
+                    value = entry.getValue();
+                }
         } catch (Exception ex) {
             return 0;
         }
         return value;
     }
 }
+
+
+//                (using hashmap interger to store teacher tokens)
+//                int counterForUser = learnerStored.get(teacher.getTeacherName());
+//                counterForUser = counterForUser + 5;
+//                teacherStored.put(teacher.getTeacherName(), counterForUser);

@@ -1,7 +1,6 @@
 package Classes;
 
 public enum Subjects {
-
     English,
     Afrikaans,
     Mathematics,
@@ -9,5 +8,13 @@ public enum Subjects {
     Biology,
     Technology,
     Sciences;
-
+//    String action;
+//    Subjects(String action)
+//    {
+//        this.action = action;
+//    }
+//    public String getAction()
+//    {
+//        return this.action;
+//    }
 }
