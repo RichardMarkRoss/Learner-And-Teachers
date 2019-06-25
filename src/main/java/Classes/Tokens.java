@@ -1,5 +1,5 @@
 package Classes;
 
-public class Tokens {
+public class Tokens extends Notes {
 
 }

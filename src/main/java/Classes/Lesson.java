@@ -1,20 +1,27 @@
 package Classes;
 
+import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.Map;
 
 import static Classes.Learners.learnerStored;
 import static Classes.Teacher.teacherStored;
 
-public class Lesson {
+class Lesson {
 
-    public Map<String, Integer> teacherTokens = new HashMap<>();
-    public Map<String, Integer> studentTokens = new HashMap<>();
-    public Map<String, Integer> lessonHeld = new HashMap<>();
+    private Map<String, Integer> teacherTokens = new HashMap<>();
+    private Map<String, Integer> studentTokens = new HashMap<>();
+//    public Map<String, Integer> lessonHeld = new HashMap<>();
 
 
-    Teacher teacher;
-    Learners learners;
+    private Teacher teacher;
+    private Learners learners;
+
+    Lesson(Teacher teacher, Learners learner, LocalDate now){
+        this.teacher = teacher;
+        this.learners = learner;
+    }
+
 
     String teacherForLesson() {
         try {

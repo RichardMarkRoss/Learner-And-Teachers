@@ -8,8 +8,12 @@ public enum Subjects {
     Biology,
     Technology,
     Sciences;
-//    String action;
-//    Subjects(String action)
+
+}
+
+
+//    int action;
+//    Subjects(int action)
 //    {
 //        this.action = action;
 //    }
@@ -17,4 +21,3 @@ public enum Subjects {
 //    {
 //        return this.action;
 //    }
-}

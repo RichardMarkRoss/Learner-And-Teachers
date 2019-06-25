@@ -42,12 +42,18 @@ public class LearnersTest {
     @Test
     public void ShouldTestIfNewLearnerStored(){
         Learners learners = new Learners("Ntando","Amigo","Tido@gmail.com", Subjects.valueOf("English"));
+        Learners learners1 = new Learners("Richard","Killer","Killer@gmail.com", Subjects.valueOf("Xhosa"));
+        Learners learners2 = new Learners("Nathri","Lagking","Kinglag@gmail.com", Subjects.valueOf("afrikaans"));
 
         learners.setLessons(Subjects.valueOf("History"));
         learners.setLessons(Subjects.valueOf("Biology"));
         learners.setLessons(Subjects.valueOf("Mathematics"));
-
-
+        learners1.setLessons(Subjects.valueOf("History"));
+        learners1.setLessons(Subjects.valueOf("Biology"));
+        learners1.setLessons(Subjects.valueOf("Mathematics"));
+        learners2.setLessons(Subjects.valueOf("History"));
+        learners2.setLessons(Subjects.valueOf("Biology"));
+        learners2.setLessons(Subjects.valueOf("Mathematics"));
 
         assertEquals("new learner added: Ntando", learners.setPerson());
         assertEquals("Lesson Added", learners.storeLessons());

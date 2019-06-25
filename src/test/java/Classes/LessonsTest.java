@@ -3,6 +3,8 @@ package Classes;
 import org.junit.Test;
 
 //import static Classes.Subjects.valueOf;
+import java.time.LocalDate;
+
 import static org.junit.Assert.assertEquals;
 
 public class LessonsTest {
@@ -11,7 +13,7 @@ public class LessonsTest {
 
         Learners learners = new Learners("greg", "folks","greg@gmail.com", Subjects.Afrikaans);
         Teacher teacher = new Teacher("Richard", "Ross", "richard@gmail.com", Subjects.valueOf("English"));
-        Lesson lesson = new Lesson();
+        Lesson lesson = new Lesson(teacher, learners, LocalDate.now());
 
         teacher.setLessons(Subjects.valueOf("History"));
         teacher.setLessons(Subjects.valueOf("Biology"));
@@ -30,7 +32,7 @@ public class LessonsTest {
 
         Learners learners = new Learners("greg", "folks","greg@gmail.com", Subjects.Afrikaans);
         Teacher teacher = new Teacher("Richard", "Ross", "richard@gmail.com", Subjects.valueOf("English"));
-        Lesson lesson = new Lesson();
+        Lesson lesson = new Lesson(teacher, learners, LocalDate.now());
 
         teacher.setLessons(Subjects.valueOf("History"));
         teacher.setLessons(Subjects.valueOf("Biology"));
@@ -48,7 +50,7 @@ public class LessonsTest {
     public void ShouldTestIfTeacherTokensDemo(){
         Teacher teacher = new Teacher("Richard", "Ross", "richard@gmail.com", Subjects.valueOf("English"));
         Learners learners = new Learners("greg", "folks","greg@gmail.com", Subjects.Afrikaans);
-        Lesson lesson = new Lesson();
+        Lesson lesson = new Lesson(teacher, learners, LocalDate.now());
 
         teacher.setLessons(Subjects.valueOf("History"));
         teacher.setLessons(Subjects.valueOf("Biology"));
@@ -66,7 +68,7 @@ public class LessonsTest {
     public void ShouldTestIfStudentsTokensDemo(){
         Teacher teacher = new Teacher("Richard", "Ross", "richard@gmail.com", Subjects.valueOf("English"));
         Learners learners = new Learners("greg", "folks","greg@gmail.com", Subjects.Afrikaans);
-        Lesson lesson = new Lesson();
+        Lesson lesson = new Lesson(teacher, learners, LocalDate.now());
 
         teacher.setLessons(Subjects.valueOf("History"));
         teacher.setLessons(Subjects.valueOf("Biology"));
