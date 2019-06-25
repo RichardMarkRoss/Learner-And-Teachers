@@ -7,7 +7,8 @@ public enum Subjects {
     History,
     Biology,
     Technology,
-    Sciences;
+    Sciences,
+    Xhosa;
 
 }
 

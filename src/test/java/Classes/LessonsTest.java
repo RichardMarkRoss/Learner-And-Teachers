@@ -11,8 +11,8 @@ public class LessonsTest {
     @Test
     public void ShouldTestIfTeacherQualified(){
 
-        Learners learners = new Learners("greg", "folks","greg@gmail.com", Subjects.Afrikaans);
-        Teacher teacher = new Teacher("Richard", "Ross", "richard@gmail.com", Subjects.valueOf("English"));
+        Learners learners = new Learners("Greg", "Ory","greg@gmail.com", Subjects.Afrikaans);
+        Teacher teacher = new Teacher("Richard", "Ross", "richard@gmail.com",Subjects.English);
         Lesson lesson = new Lesson(teacher, learners, LocalDate.now());
 
         teacher.setLessons(Subjects.valueOf("History"));
@@ -24,13 +24,12 @@ public class LessonsTest {
         learners.setLessons(Subjects.valueOf("Mathematics"));
 
 
-
-        assertEquals("fail!", lesson.teacherForLesson());
+        assertEquals( lesson.teacherForLesson(),"failed!");
     }
     @Test
     public void ShouldTestIfLearnerQualified(){
 
-        Learners learners = new Learners("greg", "folks","greg@gmail.com", Subjects.Afrikaans);
+        Learners learners = new Learners("Greg", "Ory","greg@gmail.com", Subjects.Afrikaans);
         Teacher teacher = new Teacher("Richard", "Ross", "richard@gmail.com", Subjects.valueOf("English"));
         Lesson lesson = new Lesson(teacher, learners, LocalDate.now());
 
@@ -49,7 +48,7 @@ public class LessonsTest {
     @Test
     public void ShouldTestIfTeacherTokensDemo(){
         Teacher teacher = new Teacher("Richard", "Ross", "richard@gmail.com", Subjects.valueOf("English"));
-        Learners learners = new Learners("greg", "folks","greg@gmail.com", Subjects.Afrikaans);
+        Learners learners = new Learners("Greg", "Ory","greg@gmail.com", Subjects.Afrikaans);
         Lesson lesson = new Lesson(teacher, learners, LocalDate.now());
 
         teacher.setLessons(Subjects.valueOf("History"));
@@ -67,7 +66,7 @@ public class LessonsTest {
     @Test
     public void ShouldTestIfStudentsTokensDemo(){
         Teacher teacher = new Teacher("Richard", "Ross", "richard@gmail.com", Subjects.valueOf("English"));
-        Learners learners = new Learners("greg", "folks","greg@gmail.com", Subjects.Afrikaans);
+        Learners learners = new Learners("Greg", "Ory","greg@gmail.com", Subjects.Afrikaans);
         Lesson lesson = new Lesson(teacher, learners, LocalDate.now());
 
         teacher.setLessons(Subjects.valueOf("History"));

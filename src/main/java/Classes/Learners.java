@@ -15,7 +15,7 @@ class Learners extends Person {
     String storeLessons() {
         try {
             if (!lessonStored.containsKey(getSubjects().toString())) {
-                lessonStored.put(getSubjects().toString() , 0);
+                lessonStored.put(getSubjects().toString() , 1);
                 return "Lesson Added";
             }
             if (lessonStored.containsKey(getSubjects().toString())) {
@@ -26,10 +26,10 @@ class Learners extends Person {
         }
         return "";
     }
-    String setPerson() {
+    String storePerson() {
         try {
             if (!learnerStored.containsKey(getName())) {
-                learnerStored.put(getName(), 0);
+                learnerStored.put(getName(), 1);
                 return "new learner added: " + getName();
             }
             if (learnerStored.containsKey(getName())) {
@@ -43,6 +43,8 @@ class Learners extends Person {
         }
         return "";
     }
+
+
     boolean qualifiedPerson() {
         int mapSize = lessonStored.size();
         try {

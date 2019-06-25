@@ -43,7 +43,7 @@ public class LearnersTest {
     public void ShouldTestIfNewLearnerStored(){
         Learners learners = new Learners("Ntando","Amigo","Tido@gmail.com", Subjects.valueOf("English"));
         Learners learners1 = new Learners("Richard","Killer","Killer@gmail.com", Subjects.valueOf("Xhosa"));
-        Learners learners2 = new Learners("Nathri","Lagking","Kinglag@gmail.com", Subjects.valueOf("afrikaans"));
+        Learners learners2 = new Learners("Nathri","Lagking","Kinglag@gmail.com", Subjects.valueOf("Afrikaans"));
 
         learners.setLessons(Subjects.valueOf("History"));
         learners.setLessons(Subjects.valueOf("Biology"));
@@ -55,7 +55,7 @@ public class LearnersTest {
         learners2.setLessons(Subjects.valueOf("Biology"));
         learners2.setLessons(Subjects.valueOf("Mathematics"));
 
-        assertEquals("new learner added: Ntando", learners.setPerson());
+        assertEquals("new learner added: Nathri", learners.setPerson());
         assertEquals("Lesson Added", learners.storeLessons());
     }
 }

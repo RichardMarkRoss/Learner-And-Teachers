@@ -1,5 +1,6 @@
 package Classes;
 
+
 import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.Map;
@@ -25,8 +26,8 @@ class Lesson {
 
     String teacherForLesson() {
         try {
-            if (teacher.qualifiedPerson().equals(true)) {
-                return String.valueOf(teacher.getTeacherName());
+            if (this.teacher.qualifiedPerson().equals(true)) {
+                return String.valueOf(this.teacher.getTeacherName());
             }
             return "Teacher not qualified for lesson";
         } catch (Exception ex) {

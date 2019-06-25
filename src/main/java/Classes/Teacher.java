@@ -14,7 +14,7 @@ class Teacher extends Person {
     String storeLessons() {
         try {
             if (!lessonStored.containsKey(getSubjects().toString())) {
-                this.lessonStored.put(getSubjects().toString(), 0);
+                this.lessonStored.put(getSubjects().toString(), 1);
                 return "Lesson Added";
             }
             if (lessonStored.containsKey(getSubjects().toString())) {
@@ -27,11 +27,10 @@ class Teacher extends Person {
     }
 
 
-    String setPerson() {
-        String name = getName();
+    String storePerson() {
         try {
             if (!teacherStored.containsKey(getName())) {
-                teacherStored.put(name, 0);
+                teacherStored.put(getName(), 1);
                 return "new teacher added";
             }
             return "Update teacher";
@@ -53,10 +52,13 @@ class Teacher extends Person {
 
     String getTeacherName() {
         String key = "failed!";
-        for (HashMap.Entry<String, Integer> entry : teacherStored.entrySet()) {
-            key = entry.getKey();
+        try {
+            for (HashMap.Entry<String, Integer> entry : teacherStored.entrySet()) {
+                return entry.getKey();
+            }
             return key;
+        }catch(Exception ex){
+            return "error occurred!";
         }
-        return key;
     }
 }
