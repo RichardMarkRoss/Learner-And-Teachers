@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fbb2f0f5-9b5d-452f-a551-68ec81391d96" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/Classes/Learners.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Classes/Learners.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Classes/Lesson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Classes/Lesson.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Classes/Subjects.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Classes/Subjects.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Classes/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Classes/Teacher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Classes/LearnersTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Classes/LearnersTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Classes/LessonsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Classes/LessonsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Classes/TeachersTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Classes/TeachersTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="fbb2f0f5-9b5d-452f-a551-68ec81391d96" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,73 +12,6 @@
   </component>
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
-  </component>
-  <component name="DockManager">
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/src/test/java/Classes/LearnersTest.java">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="500">
-                    <caret line="58" column="62" lean-forward="true" selection-start-line="58" selection-start-column="62" selection-end-line="58" selection-end-column="62" />
-                    <folding>
-                      <element signature="imports" expanded="true" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/src/test/java/Classes/LessonsTest.java">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="211">
-                    <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
-                    <folding>
-                      <element signature="imports" expanded="true" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/src/test/java/Classes/PersonTest.java">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state>
-                    <caret column="16" lean-forward="true" selection-start-column="16" selection-end-column="16" />
-                    <folding>
-                      <element signature="imports" expanded="true" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/src/test/java/Classes/TeachersTest.java">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="495">
-                    <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
-                    <folding>
-                      <element signature="imports" expanded="true" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/src/test/java/Classes/NotesTest.java">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="30">
-                    <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -118,7 +43,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/Classes/Lesson.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="457">
-              <caret line="64" column="22" lean-forward="true" selection-start-line="64" selection-start-column="22" selection-end-line="64" selection-end-column="22" />
+              <caret line="64" column="22" selection-start-line="64" selection-start-column="22" selection-end-line="64" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -427,7 +352,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="82" width="1299" height="743" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49748743" weight="0.15083799" />
       <window_info id="Structure" order="1" sideWeight="0.5025126" side_tool="true" weight="0.27613726" />
@@ -691,20 +615,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Classes/TeachersTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Classes/Lesson.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="457">
-          <caret line="64" column="22" lean-forward="true" selection-start-line="64" selection-start-column="22" selection-end-line="64" selection-end-column="22" />
+          <caret line="64" column="22" selection-start-line="64" selection-start-column="22" selection-end-line="64" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -754,6 +668,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
           <caret line="35" selection-start-line="35" selection-end-line="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Classes/TeachersTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
